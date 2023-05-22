@@ -1,37 +1,16 @@
 *{
-    background-color: bisque;
-    font-family: 'Times New Roman', Times, serif;
     padding: 10px;
-    border: 10px;
-    margin: 10px;
-}
-
-nav, .a{
-padding: 10px;
-border:10px;
-margin: 10px;
-text-align: center;
-}
-
-h1{
-    padding: 10px;
-    border: 10px;
     margin:10px;
-    text-align: center;
-    display: inline-block;
-}
-#button{
-    text-align: center;
-}
-
-button{
-    text-align: center;
-    background-color: cadetblue;
-}
-
-h2{
-    color: black;
     border: 10px;
-    padding: 10px;
-    margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: bisque;
 }
+
+nav{
+    padding: 10px;
+}
+
+a, .timer{
+    text-align: center;
+}
+
