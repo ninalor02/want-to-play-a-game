@@ -14,3 +14,27 @@ a, .timer{
     text-align: center;
 }
 
+h1, h2 {
+    padding: 10px;
+    border: 10px auto;
+    text-align: center;
+}
+
+form, button{
+    padding: 10px;
+    margin:10px;
+    border: 10px;
+    text-align: center;
+}
+
+button, .data-letter{
+    font-size: 25px;
+    background-color: antiquewhite;
+}
+
+button, .data-letter:hover{
+    color:cadetblue;
+}
+
+
+
