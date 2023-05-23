@@ -7,19 +7,19 @@
     <title>Web API's </title>
 <link rel="stylesheet" href="./assets/css/style.css"></link>
 </head>
-
-<nav class="header">
+<!--header with timer and score-->
+<header>
     <a type="button" id="score">View High Scores</a>
     <a id="timer">Time: 0</a>
-</nav>
-<!--header with timer and score-->
+</header>
+<!-- main body with question and choice-->
 <body>
     <h1>Want To Play A Game?</h1>
 <div>
     <p>You only have 60 seconds to answer all of the question's. For every incorrect answers, you will be penalized.</p>
     <p>Good luck and May the odds be in your favor! </p>
     <button id="submit" class="btn active" type="button">start</button>
-    <link src="./question1.html">
+    <link rel="html" href="../want-to-play-a-game/question1.html">
 </div>
 <!--QUIZ PAGE-->
 <main class="container">
@@ -34,6 +34,8 @@
     </div>
         
     <script src="./assets/scripts/script.js"></script>
+<!--need to add this in JS-->
+    <button onclick="document.location='default.asp'"></button>
 </main>
 
 </body>
