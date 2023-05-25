@@ -6,35 +6,28 @@
     padding: 10px;
 }
 
-h1 {
-    padding: 5px;
-    border: 5px auto;
-    text-align: center;
-}
-
-header, a,  #score{
-    display:inline-block;
-    text-align: left;
-}
-
-header, a, #timer{
-    display: flexbox;
+a, #timer{
     text-align: right;
 }
 
-div, p{
+a, #score{
+    text-align: left;
+}
+h1{
     font-size: 40px;
     text-align: center;
 }
 
-.div, .p, button{
-background-color: beige;
+p{
+    text-align: center;
+    font-size: 35px;
+}
+.div, #button, #start{
+    font-weight: bolder;
+    font-size: 35px;
+    text-align: center;
 }
 
-.div, .p, button:hover {
-color:cadetblue;
-}
-
-button, #submit{
-    font-size: 30px;
+.div, #button, #start:hover{
+    color: darkcyan;
 }

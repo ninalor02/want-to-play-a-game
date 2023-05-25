@@ -4,42 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web API's </title>
+    <title>JS quiz </title>
 <link rel="stylesheet" href="./assets/css/style.css"></link>
 </head>
+
 <!--header with timer and score-->
-<header>
-    <a type="button" id="score">View High Scores</a>
-    <a id="timer">Time: 0</a>
-</header>
+
+<nav class="header">
+    <div class="card-body justify-content-end">
+        <a id="score">View High Scores</a>
+        <a id="timer">Time: 0</a>
+    </div>
+</nav>
+
 <!-- main body with question and choice-->
-<body>
+<body onload="question1">
     <h1>Want To Play A Game?</h1>
-<div>
-    <p>You only have 60 seconds to answer all of the question's. For every incorrect answers, you will be penalized.</p>
-    <p>Good luck and May the odds be in your favor! </p>
-    <button id="submit" class="btn active" type="button">start</button>
-    <link rel="html" href="../want-to-play-a-game/question1.html">
-</div>
+    <div>
+        <p>You only have 60 seconds to answer all of the question's. For every incorrect answers, you will be penalized. Good luck and May the odds be in your favor! </p>
+    <div id="button">
+    <button id="start" class="active" type="button">start</button>
+
+    </div>
+    </div>
 <!--QUIZ PAGE-->
 
-    <h1> Round 1</h1>
-<div>
-    <main class="container">
-            <!--question 1 -->
-    <h2>What is the world's most popular language?</h2>
-    <form>
-
-        <button id="A" class="btn active" type="button" data-letter="A">A. English</button>
-        <button id="B" class="btn active" type="button" data-letter="B">B. Spanish</button>
-        <button id="C" class="btn active" type="button" data-letter="C">C. French</button>
-        <button id="D" class="btn active" type="button" data-letter="D">D. Javascript</button>
-
-    </form>
-</div>
-    <!--response after selecting answer-->
-        <div id="answerRepsonse"></div>
-    </div>
     <!--final scroe -->
     <a href="./highscore.html"></a>
     <div id="finalpage" style="display: none;">
