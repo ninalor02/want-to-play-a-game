@@ -1,5 +1,5 @@
 /* VAR BODY - DOCUMENT BODY */
-{
+function {
     //body..
     var score=0;
     if(document.getElementById('correct1').checked)

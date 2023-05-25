@@ -4,49 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Want To Play A Game?</title>
+    <link rel="stylesheet" href="./assets/css/question2.css">
+    <title>Quiz Code Mock up</title>
 </head>
-<body>
-    <header>
-        <h1>You only have 60 seconds to answer all of the question's. For every incorrect answers, you will be penalized. Good luck and May the odds be in your favor!</h1>
-    </header>
     <div>
-        <p>Question 1. Who is the author for the book series Harry Potter?</p><br>
+        <a id="score">View High Scores</a>
+    </div>
+    <div>
+        <a id="timer">Time: 0</a>
+    </div>
+<body>
+        <header>
+            <h1>Want To Play A Game?</h1>
+            <h2>You only have 60 seconds to answer all of the question's. For every incorrect answers, you will be penalized. Good luck and May the odds be in your favor!</h2>
+        </header>
+    <div>
+        <p class="q1">Question 1. Who is the author for the book series Harry Potter?</p><br>
             <input type="radio" name="q1">E.L. James<br>
             <input type="radio" name="q1" id="correct1">J.K. Rowling<br>
             <input type="radio" name="q1">Maya Banks<br>
             <input type="radio" name="q1">James Patterson<br>
    <!--answer is B : J.K. Rowling--> 
     </div>
-
-
+    <br>
     <div>
-        <p>Question 2. Who is Tom Riddle?</p><br>
+        <p class="q2">Question 2. Who is Tom Riddle?</p><br>
             <input type="radio" name="q2" id="correct2">Voldemort<br>
             <input type="radio" name="q2">Dumboldore<br>
             <input type="radio" name="q2">Hagrid<br>
             <input type="radio" name="q2">Severus Snape<br>
     <!--answer is A : Tom Riddle--> 
     </div>
-
-        <p>Question 3. Which of the following that was not a Horcrux?</p><br>
+    <br>
+    <div>
+        <p class="q3">Question 3. Which of the following that was not a Horcrux?</p><br>
             <input type="radio" name="q3">Diary<br>
             <input type="radio" name="q3">Basilisk<br>
             <input type="radio" name="q3" id="correct3">stone<br>
             <input type="radio" name="q3">Ring<br>
     <!--answer is C : Stone--> 
-
-        <p>Question 4. What or Who lives inside the Chamber of Secrects?</p><br>
+    </div>
+    <br>
+    <div>
+        <p class="q4">Question 4. What or Who lives inside the Chamber of Secrects?</p><br>
             <input type="radio" name="q4">Happy Potter<br>
             <input type="radio" name="q4" id="correct4">Severus Snape<br>
             <input type="radio" name="q4">Draco Malfoy<br>
             <input type="radio" name="q4">Ronald Weasley<br>
     <!--answer is B : Severus Snape--> 
+    </div>
 
-    <input type="submit" name="submit" value="submitQuiz" onclick="result()">
-
-    <button name="previous" id="previous" class="btn btn-success">Previous</button>
-    <button name="next" id="next" class="btn-success">Next</button>
+    <input type="submit" name="submit" value="Submit Quiz" onclick="result()">
+    <input type="previous" name="previous" value="Previous" onclick="result()">
+    <input type="next" name="next" value="Next" onclick="result()">
 <script type="text/javascript"></script>
     
 </body>
