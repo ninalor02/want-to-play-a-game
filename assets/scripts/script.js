@@ -1,26 +1,29 @@
 /* VAR BODY - DOCUMENT BODY */
-var header = document.querySelector("header");
-var score = document.getElementById("score");
-var submitButton = document.getElementById("submitButton");
-
-var question1Header = document.getElementById("question1Header");
-var choiceA = document.getElementById("A");
-var choiceA = document.getElementById("B");
-var choiceA = document.getElementById("C");
-var choiceA = document.getElementById("D");
-var answerResponse = document.getElementById("answerResponse");
-
-
-
-/* QUESTION ARRAY*/
-
-var question1 = [
+{
+    //body..
+    var score=0;
+    if(document.getElementById('correct1').checked)
     {
-        "question1" : "WHat is the world's most popular language?",
-        "A" : "A. English",
-        "B" : "B. Spanish",
-        "C" : "C. French",
-        "D" : "D. Javascript",
+        score++;
     }
-]
-console.log();
+    var score=0;
+    if(document.getElementById('correct2').checked)
+    {
+        score++;
+    }
+    var score=0;
+    if(document.getElementById('correct3').checked)
+    {
+        score++;
+    }
+    var score=0;
+    if(document.getElementById('correct4').checked)
+    {
+        score++;
+    }
+
+    document.write("Your score is:"+score);
+
+
+
+}
