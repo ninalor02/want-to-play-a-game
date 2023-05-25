@@ -17,6 +17,17 @@ Github : https://github.com/ninalor02
 Github live page: https://ninalor02.github.io/want-to-play-a-game/
 
 
+HTML files
+
+There are 3 files to HTML 
+- Front page
+- Question/Quiz page
+- score 
+
+CSS files
+
+There are 3 files to the CSS, as 1 of each of the css belongs to one of each  own HTML.
+
 
 
 

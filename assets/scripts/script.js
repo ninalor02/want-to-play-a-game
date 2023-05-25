@@ -17,3 +17,5 @@ function setTime() {
     }, 1000);
 }
 setTime();
+
+/* I am unsure of how to set the timers and set it up and setting up the scores*/
