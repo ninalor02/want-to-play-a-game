@@ -7,11 +7,20 @@ In this game, it will give you question's and you are suppose to answer them. Th
 
 * The results at the end will show you the score base on the answer you picked.
 
+
+
 // unable to set the timer correctly in JS //
+// unable to set js up correctly//
 
 Github : https://github.com/ninalor02
 
-Github live page: 
+Github live page: https://ninalor02.github.io/want-to-play-a-game/
+
+
+
+
+
+
 
 
 
