@@ -1,11 +1,12 @@
 /* this pertains to front page of quiz */
 
 *{
-    font-family: 'Times New Roman', Times, serif;
-    background-color: bisque;
-    border: 10px;
-    margin:10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px;
+    margin: 10px;
+    border: 10px;
+    background-color: darkcyan;
+    color:white;
 }
 
 a, #timer{
@@ -35,6 +36,6 @@ p{
 }
 
 button, #start, .active{
-    background-color: rgb(221, 156, 71);
+    background-color: darkslategray;
 }
 

@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS quiz </title>
 <link rel="stylesheet" href="./assets/css/style.css"></link>
+
 </head>
 
 <!--header with timer and score-->
 
 <nav class="header">
-    <div class="card-body justify-content-end">
-        <a id="score">View High Scores</a>
-        <a id="timer">Time: 0</a>
+    <div class="card-body">
+        <a id="score" class="btn" href="./highscore.html">View High Scores</a>
+        <a id="timer" class="btn" href="./score.html">Time: 0</a>
     </div>
 </nav>
 
@@ -23,22 +24,12 @@
     <div>
         <p>You only have 60 seconds to answer all of the question's. For every incorrect answers, you will be penalized. Good luck and May the odds be in your favor! </p>
     <div id="button">
-    <button id="start" class="active" type="button">start</button>
+        <a id="start" class="button" href="./game.html">start</a>
+    </div>
+    </div>
 
-    </div>
-    </div>
-<!--QUIZ PAGE-->
-
-    <!--final scroe -->
-    <a href="./highscore.html"></a>
-    <div id="finalpage" style="display: none;">
-        <h2 id="completed">completed</h2>
-    </div>
-        
     <script src="./assets/scripts/script.js"></script>
-<!--need to add this in JS-->
-    <button onclick="document.location='default.asp'"></button>
-</main>
+
 
 </body>
 </html>

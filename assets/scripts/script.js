@@ -1,29 +1,19 @@
 /* VAR BODY - DOCUMENT BODY */
-function {
-    //body..
-    var score=0;
-    if(document.getElementById('correct1').checked)
-    {
-        score++;
-    }
-    var score=0;
-    if(document.getElementById('correct2').checked)
-    {
-        score++;
-    }
-    var score=0;
-    if(document.getElementById('correct3').checked)
-    {
-        score++;
-    }
-    var score=0;
-    if(document.getElementById('correct4').checked)
-    {
-        score++;
-    }
+var mainE1 = document.getElementById('time');
+var secondsLeft =10;
 
-    document.write("Your score is:"+score);
+function setTime() {
+    //seting interval in variable //
+    var timerInterval = setInterval(function() {
+        secondsLeft--;
+        timerInterval.textcontent = secondsLeft + "seconds left till quiz end"
+    
+        if(secondsLeft ===0){
+            clearInterval(timerInterval);
 
-
-
+            sendMessage();
+        }
+    
+    }, 1000);
 }
+setTime();
