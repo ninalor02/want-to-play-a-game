@@ -25,22 +25,35 @@ form, button{
     text-align: center;
 }
 
-button,
-#A,
-#B,
-#C,
-#D {
-    font-size: 25px;
+.ul, .button,
+#A.active,
+#B.active,
+#C.active,
+#D.active {
+    text-align: center;
+    display: table-column;
+    text-indent: 10px;
+    font-size: 35px;
     background-color: rgb(221, 156, 71);
 }
 
 button:hover {
-    color:cadetblue;
+    color:darkcyan;
 }
 
 #next{
-
+    padding: 10px;
+    margin:10px;
+    border: 10px;
     background-color: rgb(221, 156, 71);
-    float: center;
+    float: right;
+}
+
+#previous{
+    padding: 10px;
+    margin:10px;
+    border: 10px;
+    background-color: rgb(221, 156, 71);
+    float: left;
 }
 
