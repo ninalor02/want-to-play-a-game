@@ -3,8 +3,9 @@
     padding: 10px;
     margin: 10px;
     border: 10px;
-    background-color: darkcyan;
-    color:white;
+    background-color: white;
+    color:black;
+    font-size: 35px;
 }
 
 
@@ -18,7 +19,7 @@ p,
 #q2,
 #q3,
 #q4{
-    background-color: cyan;
+    
 }
 
 
