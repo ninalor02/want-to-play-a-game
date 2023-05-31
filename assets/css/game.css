@@ -5,22 +5,21 @@
     border: 10px;
     background-color: white;
     color:black;
-    font-size: 35px;
+    
 }
-
-
 
 h1,h2{
     text-align: center;
+
 }
 
-p,
+p{
+    font-size: 40px;
+}
+
 #q1,
 #q2,
 #q3,
 #q4{
-    
+    font-size: 35px;
 }
-
-
-

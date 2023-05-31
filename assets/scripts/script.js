@@ -1,22 +1,24 @@
 /* VAR BODY - DOCUMENT BODY */
 
-var mainE1 = document.getElementById('time');
-var secondsLeft =10;
-
-function startTime() {
-    //seting interval in variable //
-const today = new Date();
-  let h = today.getHours();
-  let m = today.getMinutes();
-  let s = today.getSeconds();
-  m = checkTime(m);
+function countdown(minutes) {
+    var seconds = 60;
+    var mins = minutes
+    function tick() {
+        //This script expects an element with an ID = "counter". You can change that to what ever you want. 
+        var counter = document.getElementById("timer");
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML = current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            setTimeout(tick, 1000);
+        } else {
+            if(mins > 1){
+                countdown(mins-1);           
+            }
+        }
     }
-function checkTime(i) {
-    if(i < 10) {i = "0" + i};
-    return i;
-};
+    tick();
+}
 
-
-  
 
 /* I am unsure of how to set the timers and set it up and setting up the scores*/
