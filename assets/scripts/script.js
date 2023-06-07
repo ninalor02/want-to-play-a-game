@@ -1,12 +1,13 @@
 /* VAR BODY - DOCUMENT BODY */
-var timerElement = document.querySelector(".time");
-var timerElement = document.querySelector(".timer-count");
-var startButton = document.querySelector(".start-button");
+var timer = document.getElementById("timer");
+var timerElement = document.querySelector("timer-count");
+var startButton = document.getElementById("start");
+var submitButton = document.getElementById("final");
 // console.log('timer1'); //working// 
 
 
 var correctAnswer = "";
-var score;
+var score = 0;
 var timer;
 var timerCount;
 
@@ -20,48 +21,51 @@ var words = ["J.K. Rowling","Voldemort", "Stone", "Severus Snape", "Happy Potter
  var secondsLeft = 60;
 // console.log('testing2'); //working// 
 
- function init() {
-  getTimer();
-}
-// console.log('false'); //working// 
-
-
-
-
-
-
-
-
-
-
-
-/*
-
- function setTime() {
-
+function setTime() {
+  // Sets interval in variable
   var timerInterval = setInterval(function() {
     secondsLeft--;
-    timeEl.textContent = secondsLeft + "running out of time";
-    
-    console.log('timerInterval'); /* this is NOT working in console.log*/ 
-/*
-    if(secondsLeft > 1) {
+    timer.textContent = secondsLeft + " seconds left till quiz end.";
 
-      timerEl.textContent = secondsLeft + 'seconds remaining';
-      secondsLeft--;
-    } else if (secondsLeft === 1) {
-      timeEl.textContent + 'seconds remaining';
-      secondsLeft--;
-    } else {
-      timeEl.textContent = '';
-
+    if(secondsLeft === 0) {
+      // Stops execution of action at set interval
       clearInterval(timerInterval);
-
-      sendMessage('out of time');
-      console.log('out of time'); /* this is NOT working in console.log 
+      // Calls function to create and append image
     }
 
   }, 1000);
-}   
+}
 
-*/
+setTime();
+console.log('hi', submitButton)
+
+
+submitButton.addEventListener("click", function() {
+  //this part down
+
+  //QUIZ 1
+var quizOneButton = document.querySelectorAll('input[type="radio"].hp');
+for (let index = 0; index < quizOneButton.length; index++) {
+  const element = quizOneButton[index];
+
+
+  if(element.checked){
+    console.log('el ', element.dataset.correct)
+    if(element.dataset.correct){
+      console.log('good')
+      score++;
+    }
+    else {
+      secondsLeft -= 10
+      console.log('should minus from timer')
+    }
+  }
+// ==========
+
+  //QUIZ 2
+
+  
+}
+console.log('q1', quizOneButton)
+});
+
