@@ -78,4 +78,31 @@ var questions = [
 var createLandingPage = function() {
   time = 75;
   i = 0;
+
+  var timer = document.querySelector("#timer");
+  timer.textContent = "Time: 0";
+
+  //created the beginning page for the quiz
+  var landingPageContainer = document.createElement("div");
+    landingPageContainer.className = "landing-page";
+
+    //created the title 
+  var title = document.createElement('h2');
+  title.className = "title";
+  title.textContent = "Want to play a game?";
+
+  // creating instructions //
+  var instructions = document.createElement('p');
+  instructions.className = "instructions";
+  instructions.textContent = "You only have 60 seconds to complete this quiz. You will be penalized each time you select the wrong answer. MAY THE ODDS BE IN YOU FAVOR"
+
+  //creating a start button//
+  var startButton = document.createElement('button');
+  startButton.className = "start";
+  startButton.textContent = "click-here";
+
+
+
+
+
 }
