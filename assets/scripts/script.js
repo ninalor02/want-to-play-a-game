@@ -54,10 +54,28 @@ var questions = [
     "b. Severus Snape",
     "c. Draco Malfoy",
     "d. Albus Dumboldore",
-    console.log('testing4')
+    console.log('Severus Snape',Severus)
   ],
   answer: "b. Severus Snape",
 },
 
+// question 5 //
+{
+  question: "What was the name of Harry Potter's owl?",
+  options: [
+    "a. Ronald",
+    "b. Dobby",
+    "c. Draco",
+    "d. Hedwig",
+    console.log('testing3', Hedwig)
+  ],
+  answer: "d. Hedwig",
+},
+];
 
-]
+// create a starting page //
+
+var createLandingPage = function() {
+  time = 75;
+  i = 0;
+}
