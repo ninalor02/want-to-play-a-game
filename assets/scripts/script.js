@@ -101,8 +101,24 @@ var createLandingPage = function() {
   startButton.className = "start";
   startButton.textContent = "click-here";
 
+// final part for the begining page b4 game start //
+landingPageContainer.append(title, instructions, startButton);
+    mainContainer.appendChild(landingPageContainer);
 
+};
 
+// this happens when the timer is counting down//
 
+var countdown = function() {
+  var timer = document.querySelector('#timer');
+  if (timer > 0) {
+    timer.textContent = "Time:" + time;
+    timer--;
+  } else {
+    timer.textContent = "Time: 0";
+    clearInterval(timer);
+    mainContainer.innerHTML = "";
+    timedOut();
+  }
+};
 
-}
