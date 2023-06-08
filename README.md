@@ -7,9 +7,24 @@ In this game, it will give you question's and you are suppose to answer them. Th
 
 * The results at the end will show you the score base on the answer you picked.
 
+* Front page of the quiz
+![Alt text](assets/images/front.jpg)
+
+* Once you press the 'START' button, the timer will start
+![Alt text](assets/images/timer.jpg)
+
+* This questions
+![Alt text](assets/images/question.jpg)
+
+* Once you click on the radio button, you should be able to select only 1 answer per question
+![Alt text](assets/images/click%20answers.jpg)
+
+* Once you click 
+![Alt text](assets/images/minus%20timer.jpg)
 
 
-// unable to set the timer correctly in JS //
+
+
 // unable to set js up correctly//
 
 Github : https://github.com/ninalor02
