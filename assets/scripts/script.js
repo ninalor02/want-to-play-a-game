@@ -1,124 +1,121 @@
-var mainContainer = document.querySelector('#main-content');
-var i = 0;
-var time = 60;
+/* VAR BODY - DOCUMENT BODY */
+var timer = document.getElementById("timer");
+
+var startButton = document.getElementById("start");
+var submitButton = document.getElementById("final");
+// console.log('timer1'); //working// 
+
+
+var correctAnswer = "";
 var score = 0;
-var score = scoreIdCounter = 0;
-var highscore = [];
-var timer = setInterval(countdown, 1000);
+var timer;
+var timerCount;
 
-var questions = [
-// question 1
-  {
-  question: "Who is the author for the book series Harry Potter?",
-  options: [
-    "a. E.L. James",
-    "b. J.K. Rowling",
-    "c. Maya Banks",
-    "d. James Patterson",
-    console.log('testing', b. J.K. Rowling)
-  ],
-  answer: "b. J.K. Rowling",
-},
+var correctAnswer = [];
+// console.log('testing words1'); //working// 
 
-// question 2
-{
-  question: "Who is Tom Riddle",
-  options: [
-    "a. Voldemort",
-    "b. Dumboldore",
-    "c. Hagrid",
-    "d. Severus Snape",
-    console.log('testing2',a. Voldemort )
-  ],
-  answer: "a. Voldemort",
-},
+// console.log('timer2'); //working// 
 
-// question 3
-{
-  question: "Which of the following that was not a Horcrux?",
-  options: [
-    "a. Diary",
-    "b. Basilisk",
-    "c. Stone",
-    "d. Ring",
-    console.log('testing3', stone)
-  ],
-  answer: "c. Stone",
-},
+ var secondsLeft = 60;
+// console.log('testing2'); //working// 
 
-// question 4
-{
-  question: "Who is the half blood prince?",
-  options: [
-    "a. Happy Potter",
-    "b. Severus Snape",
-    "c. Draco Malfoy",
-    "d. Albus Dumboldore",
-    console.log('Severus Snape',Severus)
-  ],
-  answer: "b. Severus Snape",
-},
+function setTime() {
+  // Sets interval in variable
+  var timerInterval = setInterval(function() {
+    secondsLeft--;
+    timer.textContent = `${secondsLeft} seconds left`;
 
-// question 5 //
-{
-  question: "What was the name of Harry Potter's owl?",
-  options: [
-    "a. Ronald",
-    "b. Dobby",
-    "c. Draco",
-    "d. Hedwig",
-    console.log('testing3', Hedwig)
-  ],
-  answer: "d. Hedwig",
-},
-];
+    if(secondsLeft === 0) {
+      // Stops execution of action at set interval
+      clearInterval(timerInterval);
 
-// create a starting page //
+    }
 
-var createLandingPage = function() {
-  time = 75;
-  i = 0;
+  }, 1000);
+}
 
-  var timer = document.querySelector("#timer");
-  timer.textContent = "Time: 0";
+setTime();
+console.log('hi', submitButton)
 
-  //created the beginning page for the quiz
-  var landingPageContainer = document.createElement("div");
-    landingPageContainer.className = "landing-page";
 
-    //created the title 
-  var title = document.createElement('h2');
-  title.className = "title";
-  title.textContent = "Want to play a game?";
+submitButton.addEventListener("click", function() {
+  //this part down
 
-  // creating instructions //
-  var instructions = document.createElement('p');
-  instructions.className = "instructions";
-  instructions.textContent = "You only have 60 seconds to complete this quiz. You will be penalized each time you select the wrong answer. MAY THE ODDS BE IN YOU FAVOR"
+  //QUIZ 1
+var quizOneButton = document.querySelectorAll('input[type="radio"].hp');
+for (let index = 0; index < quizOneButton.length; index++) {
+  const element = quizOneButton[index];
 
-  //creating a start button//
-  var startButton = document.createElement('button');
-  startButton.className = "start";
-  startButton.textContent = "click-here";
-
-// final part for the begining page b4 game start //
-landingPageContainer.append(title, instructions, startButton);
-    mainContainer.appendChild(landingPageContainer);
-
-};
-
-// this happens when the timer is counting down//
-
-var countdown = function() {
-  var timer = document.querySelector('#timer');
-  if (timer > 0) {
-    timer.textContent = "Time:" + time;
-    timer--;
-  } else {
-    timer.textContent = "Time: 0";
-    clearInterval(timer);
-    mainContainer.innerHTML = "";
-    timedOut();
+  if(element.checked){
+  //  console.log('el ', element.dataset.correct)
+    if(element.dataset.correct){
+    //  console.log('good')
+      score++;
+    }
+    else {
+      secondsLeft -= 10
+    //  console.log('should minus from timer')
+    }
   }
-};
 
+
+  //QUIZ 2
+  var quiztwoButton = document.querySelectorAll('input[type="radio"].hp');
+  for (let index = 0; index < quiztwoButton.length; index++) {
+    const element = quiztwoButton[index];
+  
+  
+    if(element.checked){
+    //  console.log('el ', element.dataset.correct)
+      if(element.dataset.correct){
+      //  console.log('good')
+        score++;
+      }
+      else {
+        secondsLeft -= 10
+      //  console.log('should minus from timer')
+      }
+    }
+  }
+//QUIZ 3 
+var quizThreeButton = document.querySelectorAll('input[type="radio"].hp');
+for (let index = 0; index < quizThreeButton.length; index++) {
+  const element = quizThreeButton[index];
+
+
+  if(element.checked){
+  //  console.log('el ', element.dataset.correct)
+    if(element.dataset.correct){
+    //console.log('good')
+      score++;
+    }
+    else {
+      secondsLeft -= 10
+    //  console.log('should minus from timer')
+    }
+  }
+}
+  
+  //QUIZ 4
+  var quizFourButton = document.querySelectorAll('input[type="radio"].hp');
+  for (let index = 0; index < quizFourButton.length; index++) {
+    const element = quizFourButton[index];
+  
+  
+    if(element.checked){
+    //  console.log('el ', element.dataset.correct)
+      if(element.dataset.correct){
+        console.log('good')
+        score++;
+      }
+      else {
+        secondsLeft -= 10
+      //  console.log('should minus from timer')
+      }
+    }
+  }
+//console.log('q1', quizOneButton,quiztwoButton,quizThreeButton,quizFourButton)
+
+
+}
+});
