@@ -1,6 +1,5 @@
 /* VAR BODY - DOCUMENT BODY */
 var timer = document.getElementById("timer");
-
 var startButton = document.getElementById("start");
 var submitButton = document.getElementById("final");
 // console.log('timer1'); //working// 
@@ -23,7 +22,7 @@ function setTime() {
   // Sets interval in variable
   var timerInterval = setInterval(function() {
     secondsLeft--;
-    timer.textContent = `${secondsLeft} seconds left`;
+    timer.textContent = ('secondsLeft' + secondsLeft);
 
     if(secondsLeft === 0) {
       // Stops execution of action at set interval
@@ -35,7 +34,7 @@ function setTime() {
 }
 
 setTime();
-console.log('hi', submitButton)
+// console.log('hi', submitButton)
 
 
 submitButton.addEventListener("click", function() {
@@ -105,7 +104,7 @@ for (let index = 0; index < quizThreeButton.length; index++) {
     if(element.checked){
     //  console.log('el ', element.dataset.correct)
       if(element.dataset.correct){
-        console.log('good')
+      //  console.log('good')
         score++;
       }
       else {
@@ -114,8 +113,23 @@ for (let index = 0; index < quizThreeButton.length; index++) {
       }
     }
   }
-//console.log('q1', quizOneButton,quiztwoButton,quizThreeButton,quizFourButton)
-
-
+// this is the end for saving timer and the questions//
 }
+});
+
+// saving into local storage //
+var saveScore = document.querySelector('#score');
+
+saveScore.addEventListener("click", function(event) {
+  event.preventDefault();
+  
+  // create user object from submission
+  var user = {
+    firstName: firstNameInput.value(),
+  
+  };
+console.log('firstName', firstNameInput)
+  // set new submission to local storage 
+  localStorage.setItem("user", JSON.stringify(user));
+  
 });
