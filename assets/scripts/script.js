@@ -28,3 +28,24 @@ let quizQuestions = [
         answer: "Draco Malfoy"
      }
 ];
+
+let score = 0;
+let currentQuestion = -1;
+let timeLeft = "";
+
+let startGame = function() {
+    score = 75;
+    timeLeftEl.innerHTML = score;
+
+    timeLeft = setInterval(function() {
+    score--;
+    timeLeftEl.innerHTML = score;
+
+    if (score <= 0) {
+        clearInterval(timeLeft);
+        endGame();
+    }
+  }, 1000);
+
+  nextQuestion();
+};
