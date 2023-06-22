@@ -1,7 +1,6 @@
 let timeLeftEl = document.getElementById("time-left");
 let startGameEl = document.getElementById("start-game");
 
-//Quiz quizQuestions object
 let quizQuestions = [
     {
         question: "Question 1. Who is the author for the book series Harry Potter?",
