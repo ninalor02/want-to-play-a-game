@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,26 +8,28 @@
     <link rel="stylesheet" href="./assets/css/game.css">
     <title>Code Quiz</title>
 </head>
+
 <body>
     <header>
-            <div>
-                <button onclick="getHighScore()">View High Scores</button>
-            </div>
-            <div>
-                <h3>Time Remaining: <span id="time-left">0</span></h3>
-            </div>
+        <div>
+            <button onclick="getHighScore()">View High Scores</button>
+        </div>
+        <div>
+            <h3 class="tr">Time Remaining: <span id="time-left">0</span></h3>
+        </div>
     </header>
     <main>
         <div id="start-game">
             <h1>Want To Play A Game</h1>
-            <h3>Answer all the questions before the timer runs out! <br> May the odds be in your favor!</h3>
-            <button onclick="startGame()">Start Quiz</button>
+            <h3 class="info">Answer all the questions before the timer runs out! <br> May the odds be in your favor!</h3>
+            <button onclick="startGame()" class="sq">Start Quiz</button>
         </div>
     </main>
-
+    <br>
     <footer>
-        <h2>Nina Lor</h2>
+        <h2>Created by: Nina Lor</h2>
     </footer>
     <script src="./assets/scripts/script.js"></script>
 </body>
+
 </html>

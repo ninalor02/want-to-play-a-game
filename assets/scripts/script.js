@@ -51,3 +51,33 @@ let startGame = function() {
 };
 
 
+let nextQuestion = function() {
+    currentQuestion++;
+
+    if (currentQuestion > quizQuestions.length - 1) {
+        endGame();
+        return;
+    }
+
+    let content = "<h3>" + quizQuestions[currentQuestion].question + "</h3>";
+
+    for (let i = 0; i < quizQuestions[currentQuestion].options.length; i++) {
+        let buttonContent = "<button style='display:block; margin:5px;' onclick=\"[Answer]\">[Options]</button>";
+        let quizAnswer = quizQuestions[currentQuestion].answer;
+        let quizOptions = quizQuestions[currentQuestion].options[i];
+        buttonContent = buttonContent.replace("[Options]", quizQuestions[currentQuestion].options[i]);
+
+        if (quizOptions === quizAnswer) {
+            buttonContent = buttonContent.replace("[Answer]", "correctAnswer()");
+        } else {
+            buttonContent = buttonContent.replace("[Answer]", "incorrectAnswer()");
+        }
+        content += buttonContent;
+    }
+    startGameEl.innerHTML = content;
+};
+let correctAnswer = function() {
+    alert("Your Answer is Correct.");
+    nextQuestion();
+};
+
