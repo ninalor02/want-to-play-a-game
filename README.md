@@ -8,40 +8,48 @@ In this game, it will give you question's and you are suppose to answer them. Th
 * The results at the end will show you the score base on the answer you picked.
 
 * Front page of the quiz
-![Alt text](assets/images/front.jpg)
+![Alt text](front.jpg)
 
 * Once you press the 'START' button, the timer will start
-![Alt text](assets/images/timer.jpg)
+![Alt text](start-1.jpg)
+![Alt text](timer.jpg)
 
-* This questions
-![Alt text](assets/images/question.jpg)
-
-* Once you click on the radio button, you should be able to select only 1 answer per question
-![Alt text](assets/images/click%20answers.jpg)
-
-* Once you click 
-![Alt text](assets/images/minus%20timer.jpg)
+* There are 5 questions to this challenge, and as each one is shown, you must select the correct answer.
+![Alt text](q1.jpg)
 
 
+* If you select the correct answer the prompt will show this:
+![Alt text](prompt-correct.jpg)
 
 
-// unable to set js up correctly//
+* If you select the wrong/incorrect answer, the prompt will show this: 
+* And 10 seconds will be removed from the timer.
+![Alt text](prompt-wrong.jpg)
+
+
+* Once you've completed the quiz, it will take you to the end.
+![Alt text](final.jpg)
+
+* Enter in your name in the box (Max is 5 letters/characters)
+![Alt text](name.jpg)
+
+On the top right corner is the timer remainer that you have left.
+And above the name box, it will show the final score.
+![Alt text](<total score.jpg>)
+
+* That is the end of this Quiz Challenge. Hope you enojy!
+
+
+
+
+
 
 Github : https://github.com/ninalor02
 
 Github live page: https://ninalor02.github.io/want-to-play-a-game/
 
 
-HTML files
 
-There are 3 files to HTML 
-- Front page
-- Question/Quiz page
-- score 
-
-CSS files
-
-There are 3 files to the CSS, as 1 of each of the css belongs to one of each  own HTML.
 
 
 

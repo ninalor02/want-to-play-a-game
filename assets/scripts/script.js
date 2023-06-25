@@ -81,3 +81,57 @@ let correctAnswer = function() {
     nextQuestion();
 };
 
+let incorrectAnswer = function() {
+    alert("Your Answer is Incorrect. It will subtract 10 points from your Score");
+    score -= 10;
+    nextQuestion();
+};
+
+let endGame = function() {
+    clearInterval(timeLeft);
+    let inputText = `<input type="text" id="name" placeholder="Enter Initials (2 to 5 characters)" minlength="2" maxlength="5" size="50" style="display:block; font-size:25px; padding:20px; text-align: center" required><br /><br />`
+    let quizContent = `<h3 style="padding: 20px;">Your Score is ` + score + `</h3>` + inputText + `<button onclick="setHighScore()">Submit</button>`;
+    if (score <= 20) {
+        quizContent =`<h2>Game Over! </h2>` + quizContent; 
+    } else if (score > 20 && score <= 50) {
+        quizContent = `<h2>Good job, try again!</h2>` + quizContent;
+    } else {
+        quizContent = `<h2>Congratulations!</h2>` + quizContent;
+    }
+
+    startGameEl.innerHTML = quizContent;
+};
+
+let resetGame = function() {
+    clearInterval(timeLeft);
+    score = 0;
+    currentQuestion = -1;
+
+    let quizContent = `<h1>Code Quiz!</h1>
+<h3>Answer all the questions before the timer runs out! <br> May the odds be in your favor!</h3>
+<button onclick="startGame()">Start Quiz</button>`;
+
+startGameEl.innerHTML = quizContent;
+};
+
+let setHighScore = function() {
+    localStorage.setItem("highScore", score);
+    localStorage.setItem("highScoreName", document.getElementById('name').value);
+    getHighScore();
+
+};
+
+let getHighScore = function() {
+    let quizContent = 
+    `<h3>` + localStorage.getItem("highScoreName") + ` your Score is:</h3>
+    <h2>` + localStorage.getItem("highScore") + `</h2>
+    <br /> <br />
+    <button style="display: block" onclick="clearHighScore()">Clear High Score!</button><button onclick="resetGame()">Go Back!</button>`
+
+    startGameEl.innerHTML = quizContent;
+};
+
+function clearHighScore() {
+    localStorage.setItem("highScore", "");
+    localStorage.setItem("highScoreName",  "");
+}
